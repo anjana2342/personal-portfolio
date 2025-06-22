@@ -299,6 +299,8 @@ footer p:nth-child(2){
   color: #ffffff;
   bottom: 35px;
   font-size: 19px;
+    left: 50%;
+  transform: translateX(-50%);
 }
  /* ========== Responsive Design ========== */
 @media screen and (max-width: 1200px) {
@@ -368,31 +370,20 @@ footer p:nth-child(2){
 
 
 @media screen and (max-width: 480px) {
-
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
+  .nav{
     flex-direction: column;
-    background-color: #1a0935;
-    width: 100%;
+    align-items: center;
   }
 
-  .nav-links ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0;
+  .nav ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
   }
-
-  .nav-links ul li {
-    margin: 10px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
+  .nav img{
+    margin-bottom: 10px;
   }
   .header-text h1 {
     font-size: 28px;
@@ -471,7 +462,9 @@ footer p:nth-child(2){
   }
 
   .end {
-    position: static;
-    margin-top: 20px;
+    position: static !important;
+    margin-top: 10px;
+  transform: none !important;
+  text-align: center;
   }
 }
